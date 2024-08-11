@@ -2,6 +2,7 @@ import libemg
 import time
 import matplotlib.pyplot as plt
 import matplotlib
+import numpy as np
 matplotlib.use('TkAgg')
 
 def main():
@@ -25,8 +26,12 @@ def main():
     # Altenatively, for a sifi streamer, you can run the below line:
     # The sifi streamer can be configured to use the biopoint or bioarmband, and include the
     # full multi-modal suite (EMG, ECG, EDA, IMU, PPG).
-    mac = "CA:C0:CE:88:87:C1"
+    mac = ""
+    
     sifi_process, shared_memory_items = libemg.streamers.sifibridge_streamer(mac=mac)
+    # For the biopoint device, add these two line to the above function call
+        #shared_memory_items=[["emg",       (3000,1), np.double],
+        #                     ["emg_count", (1,1),    np.int32]])
 
     # The delsys_process and sifi_process are handles to the process that runs in the background.
     # The shared memory items is a list of descriptors for where the data is stored, and other
