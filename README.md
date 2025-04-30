@@ -3,3 +3,5 @@
 Contains code used during the MEC24 `LibEMG` workshop. `walkthrough.ipynb` contains an interactive API walkthrough and `online_walkthrough.py` showcases online functionality of `LibEMG`.
 
 These interactive walkthroughs highlight some key functionality of `LibEMG`, but not everything is shown. Please consult the [documentation](https://libemg.github.io/libemg/index.html) or the [source code](https://github.com/LibEMG/libemg/tree/main) for a more in-depth look at the API.
+
+**Note:** Given that this workshop was presented at MEC24, it is not up-to-date with the current version of `LibEMG`. This notebook was written using `v1.0.2`, so keep this in mind when using it.
